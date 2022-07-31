@@ -1,0 +1,231 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    background-color: #0a1929;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.addTodoContainer {
+    background-color: #fff;
+    margin-top: 40px;
+    border-radius: 5px;
+    padding: 16px;
+
+    .submitButton {
+        width: 100%;
+        height: 56px;
+    }
+}
+
+.switchContainer {
+    position: relative;
+    color: #fff;
+    background-color: #1b4878;
+    height: 50px;
+    border-radius: 25px;
+    display: inline-flex;
+    align-items: center;
+    gap: 32px;
+    margin-top: 40px;
+    padding: 0 16px;
+
+    span {
+        z-index: 10;
+        cursor: pointer;
+        text-align: center;
+        line-height: 1.4;
+        font-size: 13px;
+    }
+
+    div {
+        position: absolute;
+        background-color: #0a1929;
+        height: 43px;
+        transition: all 300ms;
+        width: 48%;
+        z-index: 0;
+        border-radius: 50px;
+        top: 4px;
+        left: 4px;
+
+        &.active {
+            transition: all 300ms;
+            left: 51%;
+        }
+    }
+}
+
+.todoContainer {
+    background-color: #fff;
+    margin-top: 40px;
+    border-radius: 5px;
+    border: 1px solid #132f4c;
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &.completed {
+        background-color: #ecf0f1;
+    }
+
+    .todoDetail {
+        display: flex;
+        align-items: flex-start;
+        flex: 1;
+        flex-direction: column;
+
+        .date {
+            font-size: 12px;
+            margin-left: 28px;
+            margin-top: 12px;
+        }
+
+        .label {
+            overflow-wrap: break-word;
+            white-space: unset;
+            // word-break: break-all;
+
+            &.active {
+                text-decoration: line-through;
+                color: #ccc;
+            }
+        }
+    }
+}
+
+.emptyContainer {
+    margin-top: 40px;
+    padding: 16px;
+}
