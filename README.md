@@ -26,7 +26,7 @@ $ git clone https://github.com/ahmtxonly/todoapp.git
 - Go to the project directory and install dependencies:
 
 ```bash
-$ cd todoapp && npm install
+$ cd todoapp && npm install --force
 ```
 
 - Go to the project "backend" directory and install dependencies:
