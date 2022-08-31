@@ -47,4 +47,4 @@ $ cd todoapp && cd backend && npm run build && npm run start
 $ cd todoapp && npm run start
 ```
 
-- And go to localhost:3000x
+- And go to localhost:3000
